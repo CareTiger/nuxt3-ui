@@ -13,10 +13,9 @@
                                 @click="toast.add({ title: 'Hello world!' })" />
                         </li>
                         <li>
-                            <UButton
-                                color="red"
-                                label="Show error toast"
-                                @click="toast.add({ title: 'Hello world!' })" />
+                            <UButton color="red" label="Show error toast"
+                            @click="toast.add({ title: 'Hello world!',
+                            color:"red" })" />
                         </li>
                     </ul>
                 </div>
