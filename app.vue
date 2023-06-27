@@ -1,29 +1,15 @@
 <template>
     <div class="">
         <UContainer>
-            <div class="min-h-screen grid place-items-center">
-                <div>
-                    <p class="text-2xl font-semibold leading-6 block mb-6">
-                        Notifications
-                    </p>
-                    <ul class="flex flex-row space-x-4">
-                        <li>
-                            <UButton
-                                label="Show success toast"
-                                @click="toast.add({ title: 'Hello world!' })" />
-                        </li>
-                        <li>
-                            <UButton color="red" label="Show error toast"
-                            @click="toast.add({ title: 'Hello world!',
-                            color:"red" })" />
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            <USelect v-model="component" :options="components" />
+            <component :is="component" v-if="component" />
         </UContainer>
-        <UNotifications />
     </div>
 </template>
 <script setup>
-const toast = useToast();
+const c1 = resolveComponent("Component1");
+const c2 = resolveComponent("Component2");
+const c3 = resolveComponent("Component3");
+const components = ref([c1, c2, c2]);
+const component = ref(components.value[0]);
 </script>
