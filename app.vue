@@ -1,10 +1,7 @@
 <template>
     <div class="h-screen">
         <UContainer class="grid place-items-center">
-
-
-            <div class="h-96 w-96 bg-primary-600"></div>
-
+            <div class="h-96 w-96 bg-primary-600 rounded-3xl"></div>
 
             <!-- <USelect v-model="component" :options="components" />
             <component :is="component" v-if="component" /> -->
